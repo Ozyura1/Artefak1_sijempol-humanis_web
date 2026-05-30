@@ -1,0 +1,98 @@
+Nama Aplikasi: SiJempol Humanis - Sistem Informasi Administrasi Kependudukan
+
+Link Repository:
+https://github.com/Ozyura1/Artefak1_sijempol-humanis_web
+
+Teknologi yang Digunakan:
+
+- Frontend: Next.js 15, React 19, Tailwind CSS
+- Backend: Express.js
+- Database: JSON (File-based)
+- Authentication: JWT + bcryptjs
+
+Konfigurasi Aplikasi:
+
+1. Clone repository
+   git clone https://github.com/Ozyura1/Artefak1_sijempol-humanis_web
+   cd sijempol-humanis
+
+2. Install dependencies frontend
+   npm install
+
+3. Install dependencies backend
+   cd backend
+   npm install
+   cd ..
+
+4. Setup environment variables
+   - Frontend: Copy .env.local.example → .env.local
+   - Backend: Copy .env.example → .env
+
+5. Jalankan backend (terminal 1)
+   cd backend
+   npm start
+
+   # Backend akan berjalan di http://localhost:8000
+
+6. Jalankan frontend (terminal 2)
+   npm run dev
+
+   # Frontend akan berjalan di http://localhost:3000
+
+7. Akses aplikasi
+   - Home: http://localhost:3000
+   - Admin: http://localhost:3000/admin/login
+   - User: http://localhost:3000/dashboard/login
+
+Database:
+
+- Format: JSON (File-based)
+- Lokasi: backend/data/database.json
+- Struktur: Users, Agendas, Aspirasis, ID Cards, dan layanan lainnya
+- Detail lebih lanjut di file DATABASE_INFO.md
+
+Role dan Akun Testing:
+
+ADMIN
+
+- Username: admin
+- Password: admin123
+- Akses: http://localhost:3000/admin/login
+- Fitur: Dashboard, view submissions, approve/reject, export data
+
+USER
+
+- Username: demouser
+- Password: user123
+- Akses: http://localhost:3000/dashboard/login
+- Fitur: Submit form layanan, lihat status, lihat aspirasi
+
+Fitur Aplikasi:
+✓ User Registration & Login (dengan OTP verification)
+✓ 6 Layanan Administrasi: KTP, KK, Perkawinan, Kelahiran, Kematian, Pindah
+✓ Admin Dashboard dengan Statistik
+✓ Submission Management (Approve/Reject)
+✓ Status Tracking
+✓ Export Data CSV
+✓ Aspirasi/Keluhan Masyarakat
+✓ FAQ dan Contact Us
+✓ Email Notification
+
+File Dokumentasi:
+
+- SUBMISSION_INFO.md: Panduan setup lengkap (BACA INI DULU)
+- DATABASE_INFO.md: Dokumentasi database dan struktur
+- CHECKLIST_SUBMISSION.md: Checklist verifikasi
+- QUICK_START.md: Quick start guide
+- ARCHITECTURE.md: Architecture overview
+
+Catatan Penting:
+
+- Development environment ready-to-run
+- Database sudah populated dengan data testing
+- Tidak perlu setup database eksternal (JSON-based)
+- Email OTP sudah konfigurasi (optional untuk testing)
+- Untuk production, migrasi ke MySQL/PostgreSQL diperlukan
+
+Troubleshooting:
+Jika error saat setup, lihat file SUBMISSION_INFO.md bagian "Troubleshooting"
